@@ -73,7 +73,7 @@
 /* home section styling */
 .home{
     display: flex;
-    background: url("../img/avatarRemoveBg.png") no-repeat right;
+    background: url("../img/avatar.jpeg") no-repeat right;
     height:100vh;
     color: black;
     min-height:500px;
