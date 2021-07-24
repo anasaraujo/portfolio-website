@@ -50,23 +50,23 @@
     font-size: 16px; */
     color:#fff;
     /* color:crimson; */
-    font-size: 16px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: black;
+    color: crimson;
 }
 .navbar .sticky .logo a span{
     color: #fff;  
 }
-.navbar .sticky .menu li a:hover{
-    color: crimson;
+.navbar .sticky .menu li a:hover{    
+    color: #fff;  
 }
 /* menu hamburguer btn Styling */
 .menu-btn{
-    color: #fff;
+    color: #fff; 
     font-size: 23px;
     cursor: pointer;
 }
