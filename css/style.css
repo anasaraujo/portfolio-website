@@ -56,7 +56,8 @@
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: crimson;
+    color: black;
+    /* transition: color 0.3s ease; */
 }
 .navbar .sticky .logo a span{
     color: #fff;  
@@ -69,6 +70,7 @@
     color: #fff; 
     font-size: 23px;
     cursor: pointer;
+    /* display: none; */
 }
 /* home section styling */
 .home{
@@ -78,6 +80,8 @@
     color: black;
     min-height:500px;
     font-family: 'Ubuntu', sans-serif;
+    /* background-size: cover; */  /* cover ou contain - A imagem é renderizada, preservando sua proporção intrínseca, com o maior tamanho contido, ou cobrindo a área do elemento pai. Se a imagem não tiver uma proporção intrínseca, então ela é renderizada no tamanho da área do elemento pai.*/
+    /*background-attachment: fixed;*/   /*background-attachment: scroll|fixed|local|initial|inherit;*/
 }
 .max-width .image{
     display: flex;
@@ -101,4 +105,40 @@
 .home .home-content .text-3 span{
     color: crimson;
     font-weight: 500;
+}
+
+/*Responsive media query start*/
+@media (max-width: 947px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top:0;
+        background:#111;
+        text-align: center;
+        padding-top: 80px;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .navbar .menu li a:hover{
+        color: crimson;
+        transition: color 0.3s ease;
+    }
 }

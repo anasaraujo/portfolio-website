@@ -6,4 +6,8 @@ document.querySelector(document).ready(function(){
             document.querySelector('.navbar').classList.remove("sticky");
         }
     });
+    //toggle menu/navbar script
+    // document.querySelector('.menu-btn').click(function(){
+    //     document.querySelector('.navbar .menu').classList.toggle("active");
+    // });
 });
