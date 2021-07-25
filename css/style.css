@@ -70,7 +70,7 @@
     color: #fff; 
     font-size: 23px;
     cursor: pointer;
-    /* display: none; */
+    display: none;
 }
 /* home section styling */
 .home{
@@ -116,6 +116,9 @@
         display: block;
         z-index: 999;
     }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
     .navbar .menu{
         position: fixed;
         height: 100vh;
@@ -125,6 +128,7 @@
         background:#111;
         text-align: center;
         padding-top: 80px;
+        transition:all 0.3s ease;
     }
     .navbar .menu.active{
         left: 0;

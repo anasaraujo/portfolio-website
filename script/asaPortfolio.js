@@ -7,7 +7,13 @@ document.querySelector(document).ready(function(){
         }
     });
     //toggle menu/navbar script
-    // document.querySelector('.menu-btn').click(function(){
-    //     document.querySelector('.navbar .menu').classList.toggle("active");
+    document.querySelector('.menu-btn').click(function(){
+        document.querySelector('.navbar .menu').classList.toggle("active");
+        document.querySelector('.menu-btn i').classList.toggle("active");
+    });
+
+    // $('menu-btn').click(function(){
+    //     $('.navbar .menu').toggleClass("active");
+    //     $('.menu-btn i').toggleClass("active");
     // });
 });
