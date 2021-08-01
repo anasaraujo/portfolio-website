@@ -207,6 +207,33 @@ section{
 .about-section .about-content .rigth{
     width: 55%;    
 }
+.about-section .about-content .rigth .text{
+    font-size:25px;
+    font-weight: 600;   
+    margin-bottom: 10px;
+}
+.about-section .about-content .rigth .text span{
+    color: crimson;
+}
+.about-section .about-content .rigth p{
+    text-align: justify;
+}
+.about-section .about-content .rigth a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius:6px;
+    border: 2px solid crimson;
+    transition: color 0.3s ease;
+}
+.about-section .about-content .rigth a:hover{
+    color: crimson;
+    background: none;
+}
 
 
 
@@ -220,18 +247,25 @@ section{
 
 /* ------ Responsive media query styling ------ */
 
-@media (max-width: 1104px){
+@media (max-width: 1300px){
     .home .max-width{
         margin-left: 0px;
     }
-
 }
+
+@media (max-width: 1104px){
+    .about-section .about-content .left img{
+        height: 350px;
+        width: 350px;  
+    }
+}
+
 @media (max-width: 991px){
     .max-width{
         padding: 0 50px;
     }
-
 }
+
 @media (max-width: 947px){
     .max-width{
         padding: 0 50px;
@@ -278,6 +312,17 @@ section{
     .home .home-content a{
         font-size: 23px;
         padding: 10px 30px;    
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .about-section .about-content .column{
+        width: 50%;
+    }
+    .about-section .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
     }
 }
 
