@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <title>ASA Personal Portfolio Website</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 
 </head>
 <body>
     <nav class="navbar">
         <div class="max-width">
             <div class="logo">
-                    <a href="#"><span> < </span> ASA <span> > </span></a>
+                    <a href="#"><span> &lt; </span> ASA <span> &gt; </span></a>
             </div>
             <ul class="menu">
                 <li><a href="#">Home</a></li>
@@ -25,7 +26,8 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             <div class="menu-btn">
-               <i class="fas fa-bars"></i>
+               <i class="menu-h"></i>
+               <i class="menu-x off"></i>
             </div>            
         </div>
     </nav>
@@ -33,28 +35,53 @@
     <!-- home section start -->
     <section class="home" id="home">
         <div class="max-width">
-
             <div class="home-content">
                 <div class="text-1">Hi, my name is</div>
                 <div class="text-2">Ana Sara Araújo</div>
                 <div class="text-3">and I'm a <span>Web Developer</span></div>
+                <a href="#">Hire me</a>
             </div>            
-            
         </div>
     </section>
-    <!-- <section class="about_item">
+
+    <!-- about section start -->
+
+    <section class="about-section" id="about">
+        <div class="max-width">
+            <h2 class="title">About me</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="img/img-personalpic.png" alt="">
+                </div>
+                <div class="column rigth">
+                    <div class="text">I'm Sara and I'm a <span>Developer</span></div>
+                    <p>My experience is related to the 1 year long Full-Stack Web Development course I did in FLAG school.
+                       In this course I learned Agile, SCRUM, UI/UX, HTML, CSS, JavaScript, Typescript, Angular, Git, MySQL, MongoDB, PHP, La NodeJS.
+                       During this course I developed two projects, the first focused on front-end and the second focused on back-end.
+                       
+                       My academic training started to pass through Pure Mathematics and Physical Engineering. In my childhood and adolescence, I was a swimmer athlete, the fascination for water has always accompanied me and, parallel to my academic path, my passion for swimming was always present as a practitioner.
+                       Previously, my professional career started as a Swim Instructor and Swimming School Manager. And later, I went on to be connected to Information Technology companies, where I ended up leading teams and following projects in Angola and Mozambique.
+                    </p>
+                    <a href="#">Download my CV</a>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <section class="about_item">
         <img src="img/accessible.PNG" class="about_img">
-        <h3>Accessible</h3>
+        
         <p class="about_text">
           Designed to function properly with assistive technologies and ensure usability for every visitor.
         </p>
-      </section>
     </section>
+
     <br />
+
     <h2>Web Development Skills</h2>
     <br />
     <div class="about_skills">
-      <img src="img/Front-End/html_logo.png" alt="HTML logo">
+      <img src="./images/Front-End/html_logo.png" alt="HTML logo">
       <img src="img/Front-End/css_logo.png" alt="CSS logo">
       <img src="img/Front-End/scss_sassy_logo.png" alt="SCSS logo">
       <img src="img/Front-End/bootstrap_logo.png" alt="Bootstrap CSS framework logo">
@@ -68,8 +95,21 @@
     <p>
       To see my skills in action, check out <a href="work.html"> my portfolio</a>
       or <a href="contact.html"> get in touch </a> and tell me about your project idea!
-    </p> -->
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste natus neque necessitatibus totam illo ratione, beatae voluptate? Impedit quam dolorem numquam, quasi recusandae nisi ratione? Pariatur libero, molestias commodi in cumque quam voluptas. Exercitationem, quo rem. Nihil officia inventore suscipit quibusdam, soluta ducimus, laboriosam iure voluptas dolore hic sit asperiores blanditiis laudantium totam repudiandae, eligendi illum cupiditate ratione quo distinctio debitis architecto. Nam esse temporibus inventore minima obcaecati. Ipsum maxime assumenda culpa nisi libero eum accusantium quam, et omnis labore! Alias ratione tempora, accusantium est at nam nemo iusto. Reiciendis eveniet corrupti adipisci suscipit enim esse ab iusto laborum dolore explicabo, incidunt molestiae assumenda nihil voluptates facilis nisi quidem ex optio voluptatibus atque quis nam? Tempore exercitationem rem quos aliquam a obcaecati, voluptate odit repellat beatae dicta, sed, quidem suscipit earum laboriosam aut modi id minima porro? Unde similique mollitia nihil id commodi magni non eius temporibus ratione dolorum repudiandae error, totam sint omnis fugiat voluptatem natus, in optio voluptatibus cupiditate. Voluptatum quis ad magnam fugiat porro in facilis deserunt, fuga quam totam, delectus reiciendis, tempora itaque neque soluta laborum mollitia voluptates doloribus nihil doloremque a quos odio. Voluptas hic asperiores minus nam vero et doloremque aliquid maiores laboriosam nobis?</p>
+    </p>
+    
+    
+    
+    
+    <!-- Footer section -->
+    <footer>
+        <span>
+            <a href="https://www.linkedin.com/in/anaaraujo/" target="_blank" rel="noopener">Ana Sara Araújo</a>
+        <i class="icon-copyrigth"></i>
+        " 2021"
+        </span>
+    </footer>    
+
     <script src="./script/asaPortfolio.js"></script>
+    
 </body>
 </html>

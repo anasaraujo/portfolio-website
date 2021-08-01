@@ -10,10 +10,28 @@
     padding: 0 80px;
     margin: auto;
 }
-/* navbar styling */
+
+/* ----- icons styling ----- */
+
+.menu-h{
+    content: url("../assets/icons/menu.svg");
+    width: 30px;
+}
+.menu-x{
+    content: url("../assets/icons/close.svg");
+    width: 30px;
+}
+
+.off {
+    display: none;
+}
+
+/* ----- NAVBAR ----- */
+
 .navbar{
     position: fixed;
     width: 100%;
+    z-index: 1; /* places the navbar on top of every content  */
     padding: 30px 0;
     background: crimson;
     font-family: 'Ubuntu', sans-serif;
@@ -35,14 +53,14 @@
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: #111;
+    color: #fff;
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
     color: #fff;  
 }
 .navbar .menu li{
-    list-style: none;   
+    list-style: none;
     display: inline-block;
 }
 .navbar .menu li a{
@@ -59,27 +77,36 @@
     color: black;
     /* transition: color 0.3s ease; */
 }
-.navbar.sticky .logo a span{
+.navbar.sticky .logo a{
     color: #fff;  
+}
+.navbar.sticky .logo a span{
+    color: crimson;  
 }
 .navbar.sticky .menu li a:hover{    
     color: #fff;  
 }
-/* menu hamburguer btn Styling */
+
+/* ------ menu hamburguer btn Styling ------ */
+
 .menu-btn{
     color: #fff; 
     font-size: 23px;
     cursor: pointer;
     display: none;
 }
-/* home section styling */
+
+/* ----- home styling----- */
+
 .home{
     display: flex;
-    background: url("../img/avatar.jpeg") no-repeat right;
+    background: url("../img/img-whiteDeskClipsPens-Desfocado.png") no-repeat center;
+    background-size: cover;
     height:100vh;
     color: black;
     min-height:500px;
     font-family: 'Ubuntu', sans-serif;
+    z-index: 1;
     /* background-size: cover; */  /* cover ou contain - A imagem é renderizada, preservando sua proporção intrínseca, com o maior tamanho contido, ou cobrindo a área do elemento pai. Se a imagem não tiver uma proporção intrínseca, então ela é renderizada no tamanho da área do elemento pai.*/
     /*background-attachment: fixed;*/   /*background-attachment: scroll|fixed|local|initial|inherit;*/
 }
@@ -106,8 +133,105 @@
     color: crimson;
     font-weight: 500;
 }
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius:6px;
+    border: 2px solid crimson;
+    transition: color 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
 
-/*Responsive media query start*/
+
+/* ----- about styling ----- */
+section{
+    padding: 100px 0;
+}
+.about-section{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fbfaf6;
+    /* background-color: #F0F8F4; */
+}
+.about-section .title{
+    text-align: center;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.about-section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.about-section .title::after{
+    content: "who i am ";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.about-section .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-section .about-content .left{
+    width: 45%;    
+}
+.about-section .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;    
+}
+.about-section .about-content .rigth{
+    width: 55%;    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------ Responsive media query styling ------ */
+
+@media (max-width: 1104px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+
+}
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+
+}
 @media (max-width: 947px){
     .max-width{
         padding: 0 50px;
@@ -142,11 +266,40 @@
         color: crimson;
         transition: color 0.3s ease;
     }
-
-    .menu-btn i.active:before{
-        content: "\f00d";     /* icon cruz para voltar ao hambuguer menu */
+    /* .menu-btn i.active:before{
+        content: "\f00d";     /* icon cruz para voltar ao hambuguer menu 
+    }*/
+    .home .home-content .text-2{
+        font-size: 70px;
     }
-    
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;    
+    }
+}
 
-
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 30px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+}
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
 }
