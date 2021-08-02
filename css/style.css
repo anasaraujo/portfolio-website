@@ -100,7 +100,7 @@
 
 .home{
     display: flex;
-    background: url("../img/img-whiteDeskClipsPens-Desfocado.png") no-repeat center;
+    background: url("/assets/img/img-whiteDeskClipsPens-Desfocado.png") no-repeat center;
     background-size: cover;
     height:100vh;
     color: black;
@@ -317,12 +317,15 @@ section{
         max-width: 800px;
     }
     .about-section .about-content .column{
-        width: 50%;
+        width: 100%;
     }
     .about-section .about-content .left{
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
+    }
+    .about-section .about-content .rigth { /* for smaller screens texts jumps down over the picture*/
+        flex: 100%;
     }
 }
 
