@@ -3,8 +3,6 @@ const navbar = document.querySelector(".navbar")
 const menuBtn = document.querySelector(".menu-btn")
 const menuH = document.querySelector(".menu-h")
 const menuX = document.querySelector(".menu-x")
-const liBtn = document.getElementsByClassName('li-btn');
-const carousel = document.querySelector('.carousel');
 
 //EventListener for scroll page menu/navbar 
 window.addEventListener("scroll", function(){
@@ -25,10 +23,24 @@ menuBtn.addEventListener('click', function(){
 });
 
 //carroussel
-for (var i = 0; i < liBtn.length; i++) {
-    liBtn[i].addEventListener('click', function () {
-      menu.classList.toggle('active');
-      menuIco.classList.toggle('off');
-      closeIco.classList.toggle('off');
-    });
-  }
+function action(event){
+    let slideActive = document.querySelector('.active');
+    slideActive.classList.remove("active");
+    let futureActiveSlide = null;
+    if(event.target.id == "prevButton"){
+        //carregaram no botão de andar para trás
+         futureActiveSlide = slideActive.previousElementSibling;
+        if(futureActiveSlide == null){
+            futureActiveSlide = slideActive.parentElement.lastElementChild;
+        }
+    }else if(event.target.id == "nextButton"){
+        //carregaram no botão de andar para a frente
+         futureActiveSlide = slideActive.nextElementSibling;
+        if(futureActiveSlide == null){
+            futureActiveSlide = slideActive.parentElement.firstElementChild;
+        }
+    }
+    futureActiveSlide.classList.add("active");
+};
+document.querySelector("#prevButton").addEventListener("click",event => action(event));
+document.querySelector("#nextButton").addEventListener("click",event => action(event));
