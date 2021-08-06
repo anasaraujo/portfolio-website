@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
 *{
     margin:0;
     padding:0;
@@ -273,7 +279,7 @@ section .title::after{
 .skills-section{
     font-family: 'Poppins', sans-serif;
     background: #fbfaf6;
-    color:#111
+    color:#111;
     /* background-color: #F0F8F4; */
 }
 .skills-section .title::before{
