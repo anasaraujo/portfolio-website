@@ -11,6 +11,13 @@ html {
     box-sizing:border-box;
     text-decoration: none;
 }
+body {
+    background-color: #fbfaf6;
+}
+
+section{
+    padding: 60px 0;
+}
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -94,7 +101,6 @@ html {
 }
 
 /* ------ menu hamburguer btn ------ */
-
 .menu-btn{
     color: #fff; 
     font-size: 23px;
@@ -102,6 +108,30 @@ html {
     display: none;
 }
 
+/* ------ scroll btn ------ */
+.scroll-btn{
+    position:fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 99;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    /* opacity:0; */  /*como é que o IVO sabia este pormenor de treta?! ahahah  incompatibilidade z-index e opacity!! Fonix */
+    /* pointer-events: none; */
+    transition: all 0.3s ease;
+}
+.scroll-btn .show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
 
 /* ----- home section ----- */
 ol, ul {
@@ -112,6 +142,7 @@ ol, ul {
     background: url("/assets/img/img-whiteDeskClipsPens-Desfocado.png") no-repeat center;
     background-size: cover;
     height:100vh;
+    margin: 0;
     color: black;
     min-height:500px;
     font-family: 'Ubuntu', sans-serif;
@@ -160,13 +191,11 @@ ol, ul {
 
 
 /* ----- sections style equal in all sections ---- */
-section{
-    padding: 100px 0;
-}
 .about-section{
     font-family: 'Poppins', sans-serif;
     background: #111;
     color:#fff;
+    margin-top: 0px;
     /* background-color: #fbfaf6; */
     /* background-color: #F0F8F4; */
     
@@ -289,20 +318,60 @@ section .title::after{
     content: "what i know";
     background: #fff;
 }
-.skills-section .skills .left p{
-    text-align: center; 
+.skillsSlider{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    padding: 30px 30px;
+    border: 200px;
+    margin: 20px;
+    border-radius:6px;
 }
-.skills-section .skills .left a{
+.skillsSlider .active{
+    display: inline-flex;
+    padding: 2px 2px;
+    border-radius:6px;
+}
+.skills-section .responsive {
+    max-width: 100%;
+    height: auto;
+}
+.carrousselBtns{
+    align-self: center;
+    cursor: pointer;
+    background: crimson;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 8px;
+    margin: 0 5px;
+    border-radius: 6px;
+    border: 1px solid crimson;
+}
+.skills-section .skills p{
+    margin-top: 100px;
+    text-align: center;
+    padding: 30px 30px;
+    border:20px; 
+}
+.skills-section .skills a{
     display: inline-block;
     background: crimson;
     color: #fff;
     font-size: 12px;
     font-weight: 500;
     padding: 6px 8px;
-    margin-top: 20px;
     border-radius: 6px;
     border: 1px solid crimson;
-    transition: all 0.3s ease;
+}
+
+.buttons {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
 }
 
 
@@ -332,6 +401,10 @@ section .title::after{
 .contact .title::after{
     content: "get in touch";
     background: #fff;
+}
+.contact .contact-content {
+    display: flex;
+    justify-content: space-between;
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -480,7 +553,7 @@ footer {
     }
     .menu-btn{
         display: block;
-        z-index: 999;
+        z-index: 2;
     }
     .navbar .menu{
         position: fixed;

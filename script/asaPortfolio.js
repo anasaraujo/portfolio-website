@@ -1,18 +1,30 @@
 
 const navbar = document.querySelector(".navbar")
+const scrollBtn = document.querySelector(".scroll-btn")
 const menuBtn = document.querySelector(".menu-btn")
-const menuH = document.querySelector(".menu-h")
-const menuX = document.querySelector(".menu-x")
+const menuH = document.querySelector(".menu-h") /*icon btn hamburguer*/
+const menuX = document.querySelector(".menu-x") /*icon btn cruz*/
 
-//EventListener for scroll page menu/navbar 
+//EventListener for scroll page menu/navbar and scroll-up
 window.addEventListener("scroll", function(){
     if (this.scrollY > 20){
         navbar.classList.add("sticky");
     }else{
         navbar.classList.remove("sticky");
-    };
-
+    }
+    if (this.scrollY > 500) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+    }
 });
+
+//EventListener for scroll up to home section
+scrollBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0 });
+  });
+
+
 
 //EventListener for toggle menu/navbar hamburguer 
 menuBtn.addEventListener('click', function(){

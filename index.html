@@ -12,6 +12,9 @@
 
 </head>
 <body>
+    <div class="scroll-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
     <nav class="navbar">
         <div class="max-width">
             <div class="logo">
@@ -84,43 +87,42 @@
         <div class="max-width">
             <h2 class="title">Skills</h2>
             <div class="skills">
-                <div class="column left">
-                    <div id="slider">
-                        <input id="prevButton" type="button" value="prev">
-
-                        <div class="active">
-                            <img src="assets/img/frontEnd/html_logo.png" alt="HTML logo">
+                    <div id="slider" >
+                        <div class="skillsSlider">
+                            <div class="active">
+                                <img src="assets/img/frontEnd/html_logo.png" alt="HTML logo" class="responsive" data-aos="fade-left" data-aos-delay="100">
+                            </div>
+                            <div class="active">
+                                <img src="assets/img/frontEnd/css_logo.png" alt="CSS logo" class="responsive">
+                            </div>
+                            <div class="active">
+                                <img src="assets/img/frontEnd/bootstrap_logo.png" alt="bootstrap logo" class="responsive">
+                            </div>
+                            <div class="active">
+                                <img src="assets/img/frontEnd/scss_logo.png" alt="scss logo" class="responsive">
+                            </div>
+                            <div class="active">
+                                <img src="assets/img/frontEnd/JS_logo.png" alt="JS logo" class="responsive">
+                            </div>
+                            <div class="active">
+                                <img src="assets/img/frontEnd/jquery_logo.png" alt="ECM6 logo" class="responsive">
+                            </div>
+                            <div class="active">
+                                <img src="assets/img/frontEnd/typescript_logo.png" alt="TS logo" class="responsive">
+                            </div>
+                            <div class="active">
+                                <img src="assets/img/frontEnd/angularjs_logo-130.png" alt="js logo" class="responsive">
+                            </div>
                         </div>
-                        <div class="active">
-                            <img src="assets/img/frontEnd/css_logo.png" alt="CSS logo">
+                        <div class="buttons">
+                            <input id="prevButton" type="button" value="prev" class="carrousselBtns">
+                            <input id="nextButton" type="button" value="next" class="carrousselBtns">
                         </div>
-                        <div class="active">
-                            <img src="assets/img/frontEnd/bootstrap_logo.png" alt="bootstrap logo">
-                        </div>
-                        <div class="active">
-                            <img src="assets/img/frontEnd/scss_logo.png" alt="scss logo">
-                        </div>
-                        <div class="active">
-                            <img src="assets/img/frontEnd/JS_logo.png" alt="JS logo">
-                        </div>
-                        <div class="active">
-                            <img src="assets/img/frontEnd/jquery_logo.png" alt="ECM6 logo">
-                        </div>
-                        <div class="active">
-                            <img src="assets/img/frontEnd/typescript_logo.png" alt="TS logo">
-                        </div>
-                        <div class="active">
-                            <img src="assets/img/frontEnd/angularjs_logo-130.png" alt="js logo">
-                        </div>
-
-                               
-                        <input id="nextButton" type="button" value="next">
-                    </div>            
-                    <p>
+                    </div>
+                    <p class="skills-text">
                         To see my skills in action, check out <a href="work.html"> my portfolio</a>
-                        or <a href="contact.html"> get in touch </a> and tell me about your project idea!
+                        or <a href="#contact"> get in touch </a> and tell me about your project idea!
                     </p>
-                </div>
             </div>            
         </div>
     </section>
