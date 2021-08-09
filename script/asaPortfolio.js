@@ -36,17 +36,19 @@ menuBtn.addEventListener('click', function(){
 
 //carroussel
 function action(event){
+    const slider = document.querySelector(".skillsSlider");
     let slideActive = document.querySelector('.active');
     slideActive.classList.remove("active");
     let futureActiveSlide = null;
     if(event.target.id == "prevButton"){
-        //carregaram no botão de andar para trás
+        //button to move back to previous pic is clicked
          futureActiveSlide = slideActive.previousElementSibling;
+        slider.style.transform = "translate(-135px, 0)"
         if(futureActiveSlide == null){
             futureActiveSlide = slideActive.parentElement.lastElementChild;
         }
     }else if(event.target.id == "nextButton"){
-        //carregaram no botão de andar para a frente
+        //button to move foward to next pic is clicked
          futureActiveSlide = slideActive.nextElementSibling;
         if(futureActiveSlide == null){
             futureActiveSlide = slideActive.parentElement.firstElementChild;

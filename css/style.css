@@ -191,15 +191,7 @@ ol, ul {
 
 
 /* ----- sections style equal in all sections ---- */
-.about-section{
-    font-family: 'Poppins', sans-serif;
-    background: #111;
-    color:#fff;
-    margin-top: 0px;
-    /* background-color: #fbfaf6; */
-    /* background-color: #F0F8F4; */
-    
-}
+
 section .title{
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
@@ -209,15 +201,37 @@ section .title{
     margin-bottom: 60px;
     padding-bottom: 20px;
 }
-/* .about-section .title{
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    position: relative;    
-    font-weight: 500;
-    font-size: 40px;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-} */
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+section .title::after{
+    background: #111;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+
+
+/* ----- about section ----- */
+.about-section{
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    color:#fff;
+    margin-top: 0px;
+    /* background-color: #fbfaf6; */
+    /* background-color: #F0F8F4; */    
+}
 .about-section .about-content{
     display: flex;
     flex-wrap: wrap;
@@ -233,39 +247,6 @@ section .title{
     object-fit: cover;
     border-radius: 6px;    
 }
-section .title::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width: 180px;
-    height: 3px;
-    background: #fff;
-    transform: translateX(-50%);
-}
-/* .about-section .title::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width: 180px;
-    height: 3px;
-    background: #fff;
-    transform: translateX(-50%);
-} */
-section .title::after{
-    background: #111;
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    font-size: 20px;
-    color: crimson;
-    padding: 5px;
-    transform: translateX(-50%);
-}
-
-
-/* ----- about section ----- */
 .about-section .title::after{
     content: "who i am ";
 }
@@ -318,15 +299,24 @@ section .title::after{
     content: "what i know";
     background: #fff;
 }
+
+#slider{
+    width: 100%;
+}
 .skillsSlider{
     display: inline-flex;
-    align-items: center;
-    width: 100%;
+    width: 200%;
     height: 130px;
     padding: 30px 30px;
     border: 200px;
     margin: 20px;
     border-radius:6px;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
 }
 .skillsSlider .active{
     display: inline-flex;
@@ -372,6 +362,7 @@ section .title::after{
     align-items: center;
     justify-content: center;
     display: inline-flex;
+
 }
 
 
@@ -505,26 +496,34 @@ section .title::after{
 footer {
     font-family: 'Poppins', sans-serif;
     background: #111;
+    width: 100%;
     padding: 20px 23px;
     font-size: 15px;
     color: #fff;
+    position: relative;
     align-items: center;
-  }
-  footer i {
-    color: #fff;
-  }
-  footer span {
-    margin: 0 calc(50% - 100px);
-  }
-  
-  footer span a {
+}
+footer .findMe{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 20px;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+footer a{
     color: crimson;
     text-decoration: none;
-  }
+}
+footer span {
+    display:flex;
+    justify-content:center;
+}
+footer i {
+    color: #fff;
+}
   
-  footer span a:hover {
-    text-decoration: underline;
-  }
+
 
 /* ------ Responsive media query styling ------ */
 
