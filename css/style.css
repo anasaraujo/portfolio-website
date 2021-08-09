@@ -369,19 +369,38 @@ section .title::after{
 /* ----- services section ----- */
 .services-section{
     font-family: 'Poppins', sans-serif;
-    background: #fbfaf6;
-    color:#111
+    background: #111;
+    /* background: #fbfaf6; */
+    color:#fff;
+    padding: 200px 0 200px;
     /* background-color: #F0F8F4; */
 }
 .services-section .title::before{
-    background: #111
+    background: #fff
 }
 .services-section .title::after{
-    background: #fff;
+    background: #111;
     content: "what i do ";
 }
-.services-section .serv-content .card{
+.services-section .services-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
     width: (33% - 20px);
+}
+.services-section .services-content .box{
+    flex-grow: 1;
+    flex: 1 0 20%;
+    margin:5px;
+}
+.services-section .services-content h3{
+    color:crimson;
+}
+.services-section .services-content p{
+    font-size: 16px;
 }
 
 
