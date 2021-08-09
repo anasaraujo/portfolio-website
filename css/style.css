@@ -16,7 +16,7 @@ body {
 }
 
 section{
-    padding: 60px 0;
+    padding: 100px 0;
 }
 .max-width{
     max-width: 1300px;
@@ -417,6 +417,7 @@ section .title::after{
     justify-content: space-between;
 }
 .contact .contact-content .column{
+    font-family: 'Poppins', sans-serif;
     width: calc(50% - 30px);
 }
 .contact .contact-content .text{
