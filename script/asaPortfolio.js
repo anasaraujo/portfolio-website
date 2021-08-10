@@ -36,7 +36,7 @@ menuBtn.addEventListener('click', function(){
 // animation of home section text
 
 
-//carroussel
+//carousel
 function action(event){
     const slider = document.querySelector(".skillsSlider");
     let slideActive = document.querySelector('.active');
