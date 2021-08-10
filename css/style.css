@@ -173,6 +173,14 @@ ol, ul {
     color: crimson;
     font-weight: 500;
 }
+/* .home .home-content .text-4{
+    font-size: 27px;
+    padding-top: 7px;
+}
+.home .home-content .text-4 span{
+    color: crimson;
+    font-weight: 500;
+} */
 .home .home-content a{
     display: inline-block;
     background: crimson;

@@ -25,14 +25,16 @@ scrollBtn.addEventListener('click', function () {
   });
 
 
-
-//EventListener for toggle menu/navbar hamburguer 
+  //EventListener for toggle menu/navbar hamburguer 
 menuBtn.addEventListener('click', function(){
     document.querySelector('.menu').classList.toggle("active");
     // document.querySelector('.menu-btn').classList.toggle("active");
     menuH.classList.toggle("off");
     menuX.classList.toggle("off");
 });
+
+// animation of home section text
+
 
 //carroussel
 function action(event){
@@ -42,14 +44,15 @@ function action(event){
     let futureActiveSlide = null;
     if(event.target.id == "prevButton"){
         //button to move back to previous pic is clicked
-         futureActiveSlide = slideActive.previousElementSibling;
+        futureActiveSlide = slideActive.previousElementSibling;
         slider.style.transform = "translate(-135px, 0)"
         if(futureActiveSlide == null){
             futureActiveSlide = slideActive.parentElement.lastElementChild;
         }
     }else if(event.target.id == "nextButton"){
         //button to move foward to next pic is clicked
-         futureActiveSlide = slideActive.nextElementSibling;
+        futureActiveSlide = slideActive.nextElementSibling;
+        slider.style.transform = "translate(+135px, 0)"
         if(futureActiveSlide == null){
             futureActiveSlide = slideActive.parentElement.firstElementChild;
         }
