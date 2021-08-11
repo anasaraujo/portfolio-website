@@ -373,6 +373,59 @@ section .title::after{
 
 }
 
+/* ----- mywork section ----- */
+.mywork-section{
+    font-family: 'Poppins', sans-serif;
+    background: #fbfaf6;
+    color:#111;
+    /* background-color: #F0F8F4; */
+}
+.mywork-section .title::before{
+    background: #111
+}
+.mywork-section .title::after{
+    content: "what i done";
+    background: #fff;
+}
+.grid{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+}
+.mywork-section .mywork h2{
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+.mywork-section .mywork .note{
+    font-size: 10px;
+    font-weight: 300;
+}
+.mywork-section .mywork .layout, .layout1, .layout2 {
+    font-size: 12px;
+    cursor: pointer;
+}
+.mywork-section .mywork .changeColor{ 
+    background-color: #fbfaf6;
+    color: #fbfaf6;
+    margin: 5px;
+}
+.mywork-section .mywork p{
+    font-size: 12px;
+    padding: 4px;
+}
+
+.backgroundActive {
+    background-color: crimson;
+    margin: 5px;
+    color: #fff;
+}
+
+#grid{
+    width: 100%;
+}
+
+
 
 /* ----- services section ----- */
 .services-section{
@@ -497,6 +550,7 @@ section .title::after{
   display: flex;
   align-items: center;
 }
+
 .right form .button-area button{
   color: #fff;
   display: block;

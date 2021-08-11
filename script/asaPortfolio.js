@@ -33,7 +33,76 @@ menuBtn.addEventListener('click', function(){
     menuX.classList.toggle("off");
 });
 
-// animation of home section text
+// animation of home section span text
+
+
+//animation of mywork section
+
+var layout = document.querySelector('.layout');
+    layout.addEventListener("mouseover", mouseOver);
+    layout.addEventListener("mouseout", mouseOut);
+
+var layout1 = document.querySelector('.layout1');
+    layout1.addEventListener("mouseover", mouseOver1);
+    layout1.addEventListener("mouseout", mouseOut1);
+
+var layout2 = document.querySelector('.layout2');
+    layout2.addEventListener("mouseover", mouseOver2);
+    layout2.addEventListener("mouseout", mouseOut2);
+
+
+var overlay = document.querySelector('.overlay');
+var backgroundChanger = overlay.querySelectorAll('span');
+
+var overlay1 = document.querySelector('.overlay1');
+var backgroundChanger1 = overlay1.querySelectorAll('span');
+
+var overlay2 = document.querySelector('.overlay2');
+var backgroundChanger2 = overlay2.querySelectorAll('span');
+
+function mouseOver() {
+    // console.log(backgroundChanger)
+        backgroundChanger.forEach(backgroundChange => {
+            backgroundChange.classList.remove('changeColor');
+            backgroundChange.classList.add('backgroundActive');
+        });
+    }
+
+function mouseOver1() {
+    backgroundChanger1.forEach(backgroundChange1 => {
+        backgroundChange1.classList.remove('changeColor');
+        backgroundChange1.classList.add('backgroundActive');
+    });
+}
+
+function mouseOver2() {
+    backgroundChanger2.forEach(backgroundChange2 => {
+        backgroundChange2.classList.remove('changeColor');
+        backgroundChange2.classList.add('backgroundActive');
+    });
+}
+
+function mouseOut() {
+        backgroundChanger.forEach(backgroundChange => {
+            backgroundChange.classList.add('changeColor');
+            backgroundChange.classList.remove('backgroundActive');
+    });
+}
+
+function mouseOut1() {
+    backgroundChanger1.forEach(backgroundChange1 => {
+        backgroundChange1.classList.add('changeColor');
+        backgroundChange1.classList.remove('backgroundActive');
+    });
+}
+
+function mouseOut2() {
+    backgroundChanger2.forEach(backgroundChange2 => {
+        backgroundChange2.classList.add('changeColor');
+        backgroundChange2.classList.remove('backgroundActive');
+    });
+}
+    //   document.getElementsByClassName(".changeColor").style.backgroundColor = '#fbfaf6';
 
 
 //carousel
@@ -61,3 +130,4 @@ function action(event){
 };
 document.querySelector("#prevButton").addEventListener("click",event => action(event));
 document.querySelector("#nextButton").addEventListener("click",event => action(event));
+
