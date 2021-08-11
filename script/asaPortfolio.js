@@ -4,6 +4,7 @@ const scrollBtn = document.querySelector(".scroll-btn")
 const menuBtn = document.querySelector(".menu-btn")
 const menuH = document.querySelector(".menu-h") /*icon btn hamburguer*/
 const menuX = document.querySelector(".menu-x") /*icon btn cruz*/
+const liBtns = document.querySelectorAll(".li-btn")
 
 //EventListener for scroll page menu/navbar and scroll-up
 window.addEventListener("scroll", function(){
@@ -31,6 +32,14 @@ menuBtn.addEventListener('click', function(){
     // document.querySelector('.menu-btn').classList.toggle("active");
     menuH.classList.toggle("off");
     menuX.classList.toggle("off");
+});
+
+liBtns.forEach(liBtn => {
+    liBtn.addEventListener('click', function(){
+        document.querySelector('.menu').classList.toggle("active");
+        menuH.classList.toggle("off");
+        menuX.classList.toggle("off");
+    });
 });
 
 // animation of home section span text
@@ -106,28 +115,33 @@ function mouseOut2() {
 
 
 //carousel
-function action(event){
-    const slider = document.querySelector(".skillsSlider");
-    let slideActive = document.querySelector('.active');
-    slideActive.classList.remove("active");
-    let futureActiveSlide = null;
-    if(event.target.id == "prevButton"){
-        //button to move back to previous pic is clicked
-        futureActiveSlide = slideActive.previousElementSibling;
-        slider.style.transform = "translate(-135px, 0)"
-        if(futureActiveSlide == null){
-            futureActiveSlide = slideActive.parentElement.lastElementChild;
-        }
-    }else if(event.target.id == "nextButton"){
-        //button to move foward to next pic is clicked
-        futureActiveSlide = slideActive.nextElementSibling;
-        slider.style.transform = "translate(+135px, 0)"
-        if(futureActiveSlide == null){
-            futureActiveSlide = slideActive.parentElement.firstElementChild;
-        }
+function nextSlide(){
+    let activeSlide = document.querySelector(".activeSlide");
+    let nextActiveSlide = activeSlide.nextElementSibling;
+    activeSlide.classList.remove("activeSlide");
+    let skillsSlider = document.querySelector(".skillsSlider");
+
+    if (nextActiveSlide == null) {
+        activeSlide.parentElement.childNodes[1].classList.add("activeSlide");
+    } else {
+        nextActiveSlide.classList.add("activeSlide")
+        skillsSlider.style.transform = "translateX(+121px)"
     }
-    futureActiveSlide.classList.add("active");
-};
-document.querySelector("#prevButton").addEventListener("click",event => action(event));
-document.querySelector("#nextButton").addEventListener("click",event => action(event));
+    
+}
+
+function prevSlide(){
+    let activeSlide = document.querySelector(".activeSlide");
+    let nextActiveSlide = activeSlide.previousElementSibling;
+    activeSlide.classList.remove("activeSlide");
+
+    if (nextActiveSlide == null) {
+        activeSlide.parentElement.childNodes[15].classList.add("activeSlide");
+    } else {
+        nextActiveSlide.classList.add("activeSlide");
+        skillsSlider.style.transform = "translateX(-121px)"
+    }
+}
+document.querySelector("#nextButton").addEventListener("click", nextSlide);
+document.querySelector("#prevButton").addEventListener("click", prevSlide);
 

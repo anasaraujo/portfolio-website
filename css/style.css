@@ -313,8 +313,9 @@ section .title::after{
 }
 .skillsSlider{
     display: inline-flex;
-    width: 200%;
-    height: 130px;
+    position: relative;
+    width: 100%;
+    height: 150px;
     padding: 30px 30px;
     border: 200px;
     margin: 20px;
@@ -324,17 +325,26 @@ section .title::after{
     align-content: center;
     flex-direction: row;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-.skillsSlider .active{
-    display: inline-flex;
+
+.skillsSlider .slide{
     padding: 2px 2px;
     border-radius:6px;
 }
-.skills-section .responsive {
+
+.skillsSlider .activeSlider .responsive{
+
+    /* display: block; */
+    height: 250px;
+}
+/* .skillsSlider div{
+    display: none;
+} */
+/* .skills-section .responsive {
     max-width: 100%;
     height: auto;
-}
+} */
 .carrousselBtns{
     align-self: center;
     cursor: pointer;
