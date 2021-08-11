@@ -460,7 +460,7 @@ section .title::after{
     flex-direction: row;
     align-content: center;
     align-items: center;
-    width: (33% - 20px);
+    /* width: (33% - 20px); */
 }
 .services-section .services-content .box{
     flex-grow: 1;
